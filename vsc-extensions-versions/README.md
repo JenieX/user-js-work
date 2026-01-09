@@ -1,0 +1,9 @@
+- https://github.com/microsoft/vscode-vsce
+- https://stackoverflow.com/questions/76211091/how-can-i-get-a-list-of-a-vs-code-extensions-versions
+- https://www.reddit.com/r/vscode/comments/am1k1t/is_there_an_api_for_getting_list_of_all/
+- https://gist.github.com/scottmwyant/70f5fd296a935a15c8fbb9b9d646e6ca
+- https://www.google.com/search?q=https%3A%2F%2Fmarketplace.visualstudio.com%2F_apis%2Fpublic%2Fgallery%2Fextensionquery&hl=en-US
+- https://stackoverflow.com/questions/73637194/download-vs-code-extensions-via-commandline-or-an-api
+- https://gist.github.com/jossef/8d7681ac0c7fd28e93147aa5044bc129
+- https://github.com/microsoft/vsmarketplace/issues/238
+- https://github.com/microsoft/azure-devops-node-api/blob/be525f3b50bee51517def9b2e9c52b9316b328e5/api/interfaces/GalleryInterfaces.ts#L2124-L2145
