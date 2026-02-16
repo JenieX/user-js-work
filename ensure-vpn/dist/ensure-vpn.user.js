@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name           jx-ensure-vpn
-// @version        1.0.0
+// @version        1.0.1
 // @namespace      https://github.com/JenieX/user-js-work
 // @description    Awesome script!
 // @author         JenieX
-// @match          *://*/*
-// @match          file:///*
+// @match          https://haraj.com.sa/*
 // @grant          GM.xmlHttpRequest
 // @run-at         document-start
 // @noframes
@@ -15,8 +14,8 @@
 // @homepageURL    https://github.com/JenieX/user-js-work/tree/main/ensure-vpn
 // @updateURL      https://github.com/JenieX/user-js-work/raw/refs/heads/main/ensure-vpn/dist/ensure-vpn.meta.js
 // @downloadURL    https://github.com/JenieX/user-js-work/raw/refs/heads/main/ensure-vpn/dist/ensure-vpn.user.js
-// @icon           https://github.com/JenieX/assets/raw/main/icons/violentmonkey.png
+// @icon           http://www.google.com/s2/favicons?domain=haraj.com.sa&sz=128
 // @license        MIT
 // ==/UserScript==
 
-function n(){}const t=GM.info.script.name;const o=function(o=!1){const i=window.console,a=`[${t}]:`;return{log:i.log.bind(i,a),warn:i.warn.bind(i,a),error:i.error.bind(i,a),debug:o?i.log.bind(i,a):n}}(!1);async function i(){try{await GM.xmlHttpRequest({url:"https://vk.com/",method:"HEAD"}),o.debug("VPN is ON!")}catch{void 0!==(n="VPN is OFF!")?window.alert(`[ ${t} ]\n\n${n}`):window.alert(`[ ${t} ]`)}var n}(async function(){await i(),setInterval(async()=>{await i()},5e3)})().catch(()=>{});
+function n(){}const o=GM.info.script.name;const r=function(r=!1){const t=window.console,e=`[${o}]:`;return{log:t.log.bind(t,e),warn:t.warn.bind(t,e),error:t.error.bind(t,e),debug:r?t.log.bind(t,e):n}}(!0);function t(){GM.xmlHttpRequest({url:"https://vk.com/",method:"HEAD",onload(){r.debug("VPN is ON!")},onerror({status:n}){var t;0===n&&(r.error("VPN is OFF!"),void 0!==(t="VPN is OFF!")?window.alert(`[ ${o} ]\n\n${t}`):window.alert(`[ ${o} ]`))},onloadend(){setTimeout(()=>{t()},7e3)}})}t();
