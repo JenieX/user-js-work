@@ -5,7 +5,7 @@
 // @description    Awesome script!
 // @author         JenieX
 // @match          https://haraj.com.sa/*
-// @grant          none
+// @grant          GM.xmlHttpRequest
 // @run-at         document-start
 // @noframes
 // @compatible     chrome Violentmonkey
