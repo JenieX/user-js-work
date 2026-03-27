@@ -4,8 +4,7 @@
 // @namespace      https://github.com/JenieX/user-js-work
 // @description    Awesome script!
 // @author         JenieX
-// @match          *://*/*
-// @match          file:///*
+// @match          https://haraj.com.sa/*
 // @run-at         document-start
 // @noframes
 // @compatible     chrome Violentmonkey
@@ -14,6 +13,6 @@
 // @homepageURL    https://github.com/JenieX/user-js-work/tree/main/haraj-search-history
 // @updateURL      https://github.com/JenieX/user-js-work/raw/refs/heads/main/haraj-search-history/dist/haraj-search-history.meta.js
 // @downloadURL    https://github.com/JenieX/user-js-work/raw/refs/heads/main/haraj-search-history/dist/haraj-search-history.user.js
-// @icon           https://github.com/JenieX/assets/raw/main/icons/violentmonkey.png
+// @icon           http://www.google.com/s2/favicons?domain=haraj.com.sa&sz=128
 // @license        MIT
 // ==/UserScript==
