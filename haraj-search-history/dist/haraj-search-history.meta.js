@@ -6,7 +6,6 @@
 // @author         JenieX
 // @match          *://*/*
 // @match          file:///*
-// @grant          none
 // @run-at         document-start
 // @noframes
 // @compatible     chrome Violentmonkey
