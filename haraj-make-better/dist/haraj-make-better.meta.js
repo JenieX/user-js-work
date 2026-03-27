@@ -5,7 +5,7 @@
 // @description    Awesome script!
 // @author         JenieX
 // @match          https://haraj.com.sa/tags/*
-// @grant          none
+// @match          https://haraj.com.sa/search/*
 // @run-at         document-start
 // @noframes
 // @compatible     chrome Violentmonkey
