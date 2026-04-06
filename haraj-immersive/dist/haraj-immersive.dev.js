@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           jx-haraj-immersive-dev
-// @version        0.0.0
+// @version        0.0.1
 // @namespace      https://github.com/JenieX/user-js-work
 // @description    Awesome script!
 // @author         JenieX
@@ -23,12 +23,12 @@ const isTor = sessionStorage.getItem('isTor') === 'true';
 const exposerUUID = sessionStorage.getItem('exposerUUID')?.slice(0, -1);
 const isExposed = exposerUUID !== undefined;
 
-let bundleURL = 'http://localhost:1013/haraj-only-devices';
+let bundleURL = 'http://localhost:1013/haraj-immersive';
 
 if (GM.info.platform.mobile) {
   bundleURL = bundleURL.replace('localhost:1013', localHost);
 } else if (isExposed) {
-  bundleURL = `${exposerUUID}/haraj-only-devices/dist/haraj-only-devices.bundle.js`;
+  bundleURL = `${exposerUUID}/haraj-immersive/dist/haraj-immersive.bundle.js`;
 }
 
 fetch(bundleURL)
