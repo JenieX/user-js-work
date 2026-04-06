@@ -16,15 +16,19 @@
 // @license        MIT
 // ==/UserScript==
 
+const localHost = '172.30.21.197:1013';
+
 const isTor = sessionStorage.getItem('isTor') === 'true';
 
 const exposerUUID = sessionStorage.getItem('exposerUUID')?.slice(0, -1);
 const isExposed = exposerUUID !== undefined;
 
-let bundleURL = 'http://localhost:1013/haraj-sticky-messages';
+let bundleURL = 'http://localhost:1013/haraj-only-devices';
 
-if (isExposed) {
-  bundleURL = `${exposerUUID}/haraj-sticky-messages/dist/haraj-sticky-messages.bundle.js`;
+if (GM.info.platform.mobile) {
+  bundleURL = bundleURL.replace('localhost:1013', localHost);
+} else if (isExposed) {
+  bundleURL = `${exposerUUID}/haraj-only-devices/dist/haraj-only-devices.bundle.js`;
 }
 
 fetch(bundleURL)
