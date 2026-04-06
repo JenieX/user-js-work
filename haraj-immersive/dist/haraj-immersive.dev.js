@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           jx-haraj-immersive-dev
-// @version        0.0.1
+// @version        0.0.2
 // @namespace      https://github.com/JenieX/user-js-work
 // @description    Awesome script!
 // @author         JenieX
@@ -16,7 +16,7 @@
 // @license        MIT
 // ==/UserScript==
 
-const localHost = '172.30.21.197:1013';
+const ip = '172.30.21.197';
 
 const isTor = sessionStorage.getItem('isTor') === 'true';
 
@@ -26,7 +26,7 @@ const isExposed = exposerUUID !== undefined;
 let bundleURL = 'http://localhost:1013/haraj-immersive';
 
 if (GM.info.platform.mobile) {
-  bundleURL = bundleURL.replace('localhost:1013', localHost);
+  bundleURL = bundleURL.replace('localhost', ip);
 } else if (isExposed) {
   bundleURL = `${exposerUUID}/haraj-immersive/dist/haraj-immersive.bundle.js`;
 }
@@ -34,7 +34,15 @@ if (GM.info.platform.mobile) {
 fetch(bundleURL)
   .then(async (response) => response.text())
   .then(async (code) => {
-    if (isExposed) {
+    if (GM.info.platform.mobile) {
+      const updatedCode = code.replace(
+        'MappingURL=http://localhost:',
+        `MappingURL=http://${ip}:`,
+      );
+
+      // eslint-disable-next-line no-eval
+      eval(updatedCode);
+    } else if (isExposed) {
       let sourceMapURL = bundleURL.replace('bundle.js', 'source.map');
 
       const needle = /(MappingURL=)([^?]+)([^\n]+)/;
