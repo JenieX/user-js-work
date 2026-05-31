@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           jx-haraj-immersive-dev
-// @version        0.0.2
+// @version        0.0.3
 // @namespace      https://github.com/JenieX/user-js-work
 // @description    Awesome script!
 // @author         JenieX
@@ -16,7 +16,7 @@
 // @license        MIT
 // ==/UserScript==
 
-const ip = '172.30.21.197';
+const ip = '10.130.237.197';
 
 const isTor = sessionStorage.getItem('isTor') === 'true';
 
